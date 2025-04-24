@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mein Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+  <style>
+    .btn-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .contact-btn {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 250px;
+    }
+
+    .social-icon {
+      cursor: pointer;
+      pointer-events: auto !important;
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">Nico Placzek</div>
+    <div>
+      <ul class="nav-links">
+        <li><button class="btn btn-color-2" onclick="scrollToSection('#about')">Über mich</button></li>
+        <li><button class="btn btn-color-2" onclick="scrollToSection('#experience')">Erfahrung</button></li>
+        <li><button class="btn btn-color-2" onclick="scrollToSection('#certificates')">Zertifikate</button></li>
+        <li><button class="btn btn-color-2" onclick="scrollToSection('#contact')">Kontakt</button></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Nico Placzek</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><button class="btn btn-color-2" onclick="scrollToSection('#about'); toggleMenu()">Über mich</button></li>
+        <li><button class="btn btn-color-2" onclick="scrollToSection('#experience'); toggleMenu()">Erfahrung</button>
+        </li>
+        <li><button class="btn btn-color-2"
+            onclick="scrollToSection('#certificates'); toggleMenu()">Zertifikate</button></li>
+        <li><button class="btn btn-color-2" onclick="scrollToSection('#contact'); toggleMenu()">Kontakt</button></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/profile-pic.png" alt="Nico Placzek Profilbild" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hallo, ich bin</p>
+      <h1 class="title">Nico Placzek</h1>
+      <p class="section__text__p2">Angehender Fachinformatiker<br />Systemintegration</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">Lebenslauf</button>
+        <button class="btn btn-color-1" onclick="scrollToSection('#contact')">Kontakt</button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="Mein LinkedIn Profil" class="icon social-icon"
+          onclick="location.href='https://linkedin.com/'" />
+        <img src="./assets/github.png" alt="Mein Github Profil" class="icon social-icon"
+          onclick="location.href='https://github.com/Seven64'" />
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <p class="section__text__p1">Lern mich kennen</p>
+    <h1 class="title">Über Mich</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/about-pic.png" alt="Profilbild" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" alt="Erfahrungs-Icon" class="icon" />
+            <h3>Praktika</h3>
+            <p>Architekturbüro Giebel<br />Wissenswerkstatt Saarbrücken<br />Stadtwerke Saarbrücken</p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Bildungs-Icon" class="icon" />
+            <h3>Bildung</h3>
+            <p>Warndt-Gymnasium<br />Marie-Curie-Schule</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            Geboren am 26.06.2006 in Saarbrücken, wohnhaft in Wadgassen.
+            Aktuell besuche ich die Marie-Curie-Schule und absolviere mein Fachabitur im Bereich Technische Informatik.
+            Ich bin seit 2023 Jugendleiter beim DAV Saarbrücken und engagiere mich bei der DLRG als Rettungsschwimmer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" style="margin-bottom: 0;">
+    <p class="section__text__p1">Meine</p>
+    <h1 class="title">Fähigkeiten</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Schriftliches Programmieren</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Erfahrungs-Icon" class="icon" />
+              <div>
+                <h3>Python</h3>
+                <p>Fortgeschritten</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Erfahrungs-Icon" class="icon" />
+              <div>
+                <h3>C++</h3>
+                <p>Grundkenntnisse</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Erfahrungs-Icon" class="icon" />
+              <div>
+                <h3>HTML</h3>
+                <p>Fortgeschritten</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Erfahrungs-Icon" class="icon" />
+              <div>
+                <h3>CSS</h3>
+                <p>Fortgeschritten</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Besondere Kenntnisse</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Erfahrungs-Icon" class="icon" />
+              <div>
+                <h3>Word</h3>
+                <p>Gut</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Erfahrungs-Icon" class="icon" />
+              <div>
+                <h3>Excel</h3>
+                <p>Grundkenntnisse</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Erfahrungs-Icon" class="icon" />
+              <div>
+                <h3>PowerPoint</h3>
+                <p>Gut</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Erfahrungs-Icon" class="icon" />
+              <div>
+                <h3>3D Design</h3>
+                <p>Gut</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <p class="section__text__p1">Meine</p>
+    <h1 class="title">Zertifikate</h1>
+    <div class="btn-container">
+      <button class="btn btn-color-2" onclick="window.open('./assets/img-241207151731-seiten-1.pdf')">HTW
+        Saar</button>
+      <button class="btn btn-color-2"
+        onclick="window.open('./assets/Praktikumszeugnis Wissenswerkstatt.pdf')">Wiwe</button>
+      <button class="btn btn-color-2" onclick="window.open('./assets/img-241207151731-seiten-2.pdf')">JWINF</button>
+      <button class="btn btn-color-2" onclick="window.open('./assets/img-241207151731-seiten-5.pdf')">RoboNight
+        2018</button>
+      <button class="btn btn-color-2" onclick="window.open('./assets/img-241207151731-seiten-3.pdf')">RoboNight
+        2019</button>
+    </div>
+    </div>
+  </section>
+
+  <section id="contact" style="margin-top: 0;">
+    <p class="section__text__p1">Kontaktiere mich</p>
+    <h1 class="title">Kontakt</h1>
+    <div class="btn-container">
+      <button class="btn btn-color-2 contact-btn"
+        onclick="window.location.href='mailto:nico.placzek@gmx.de'">nico.placzek@gmx.de</button>
+      <button class="btn btn-color-2 contact-btn" onclick="window.location.href='tel:+4917676739789'">+49 176
+        76739789</button>
+    </div>
+  </section>
+
+  <footer>
+
+    <p>Copyright &#169; 2025 Nico Placzek. Alle Rechte vorbehalten.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
