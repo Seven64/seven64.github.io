@@ -1,0 +1,13 @@
+# Standardkonfiguration für das Head-Tracking-Projekt
+config:
+  # Geschwindigkeit des Trackings
+  tracking_speed: 1.5 # Einheit: Grad/Sekunde  
+  
+  # Empfindlichkeit der Bewegung
+  sensitivity: 0.8 # Wert zwischen 0 und 1  
+  
+  # Aktivierungsmodus (true = aktiv, false = inaktiv)
+  active_mode: true # Schaltet das Tracking ein oder aus
+
+  # Maximaler Bereich
+  max_range: 100 # Einheit: cm
